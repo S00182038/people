@@ -4,6 +4,7 @@
 @addTagHelper *, AuthoringTagHelpers
 @{
     Layout = null;
+   
 }
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@
     <form method="post">
         <p>
             <label for="num1">
-                  First Number : 
+                First Number :
                 <input type="text" name="num1" />
             </label>
         </p>
@@ -36,20 +37,20 @@
         <p>
             Please indicate operation :
             <br />
-            <input type="radio" name="operator1" value="addition" checked /> <label for="addition">addition</label>
+            <label for="addition"><input type="radio" name="operators" value="addition" /> addition</label>
             <br />
-            <input type="radio" name="operator1" value="division" /> <label for="division">division</label>
+            <input type="radio" name="operators" value="division" /> <label for="division">division</label>
             <br />
-            <input type="radio" name="operator1" value="multiplication" /> <label for="multiplication">multiplication</label>
+            <input type="radio" name="operators" value="multiplication" /> <label for="multiplication">multiplication</label>
             <br />
-            <input type="radio" name="operator1" value="subtraction" /> <label for="subtraction">subtraction</label>
+            <input type="radio" name="operators" value="subtraction" /> <label for="subtraction">subtraction</label>
         </p>
 
         <p><input type="submit" value="Result" /></p>
 
     </form>
 
-    
+
     <h2>@Model.ResultMassage</h2>
 
 </body>

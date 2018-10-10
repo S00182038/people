@@ -15,12 +15,30 @@ namespace people.pages
         {
 
         }
-        public void OnPost(int num1, int num2)
+        public void OnPost(int num1, int num2, string operators)
         {
-            //int num1 = Convert.ToInt32(HttpContext.Request.Form["text1"].ToString());
-            //int num2 = Convert.ToInt32(HttpContext.Request.Form["text2"].ToString());
-           
-            int result = num1 + num2;
+            double result = 0;
+
+            if (operators == "addition")
+            {
+                result = num1 + num2;
+            }
+            else if (operators == "multiplication")
+            {
+                result = num1 * num2;
+            }
+            else if (operators == "division")
+            {
+                result = (double)num1 / num2;
+            }
+            else if (operators == "subtraction")
+            {
+                result = num1 - num2;
+            }
+            else
+            {
+                result = 0;
+            }
 
             ResultMassage = "Result is :" + result;
   

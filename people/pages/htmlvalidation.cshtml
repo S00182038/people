@@ -1,0 +1,79 @@
+﻿
+
+@page
+@{
+    Layout = null;
+
+}
+
+@{ if (IsPost)
+    {
+        string studentNumber = Request.Form["studentNumber"];
+        string number1 = Request.Form["num1"];
+        string number2 = Request.Form["num2"];
+        string number3 = Request.Form["num3"];
+
+        <text>
+            You entered: <br />
+            Company Name: @studentNumber <br />
+            Contact Name: @number1 <br />
+            Employee Count: @number2<br />
+            Employee Count: @number3 <br />
+        </text>
+    }
+
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" type="text/css" href="~/StyleSheet.css">
+        <title>htmlvalidation</title>
+
+    </head>
+    <body>
+        <h1>Validation</h1>
+
+        <form method="post" action="">
+
+            <label for="">
+                Student Number :
+                <input type="text" name="studentNumber" id="studentNumber" size="20" maxlength="9" />
+            </label>
+
+            <br />
+            <fieldset>
+                <legend>Some Numbers</legend> <!-- Fieldset title -->
+
+                <label for="num1">
+                    Number 1
+                    <input type="text" name="num1" id="num1" required autofocus />
+                </label>
+                <br />
+                <br />
+
+                <label for="num2">
+                    Number 2
+                    <input type="text" name="num2" id="num2" required />
+                </label>
+                <br>
+                <br />
+
+                <label for="num3">
+                    Number 3
+                    <input type="text" name="num3" id="num3" required />
+                </label>
+                <br>
+                <br />
+
+
+            </fieldset>
+            <br />
+            <input type="submit" name="submit" value="Submit" />
+
+        </form>
+
+
+    </body>
+</html>

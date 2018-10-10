@@ -1,0 +1,30 @@
+﻿body {
+  
+   
+}
+
+h1{
+    font-size:30px;
+    color:red;
+    text-align:center;
+    margin:20px;
+
+}
+input:invalid {
+    border: 2px dashed red;
+}
+
+input:valid {
+    border: 2px solid black;
+}
+fieldset{
+    margin-right:70%;
+    background-color:white;
+    text-align:center;
+}
+form{
+    border:4px solid black;
+    margin:20px;
+    padding:20px;
+}
+
