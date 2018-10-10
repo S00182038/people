@@ -1,0 +1,56 @@
+﻿@page
+@model people.pages.AdderModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Adder</title>
+</head>
+<body>
+
+    <p>Enter two numbers </p>
+    <form method="post">
+        <p>
+            <label for="num1">
+                  First Number : 
+                <input type="text" name="num1" />
+            </label>
+        </p>
+
+        <p>
+            <label for="num2">
+                Second Number :
+                <input type="text" name="num2" />
+            </label>
+        </p>
+
+
+
+        <p>
+            Please indicate operation :
+            <br />
+            <input type="radio" name="operator1" value="addition" checked /> <label for="addition">addition</label>
+            <br />
+            <input type="radio" name="operator1" value="division" /> <label for="division">division</label>
+            <br />
+            <input type="radio" name="operator1" value="multiplication" /> <label for="multiplication">multiplication</label>
+            <br />
+            <input type="radio" name="operator1" value="subtraction" /> <label for="subtraction">subtraction</label>
+        </p>
+
+        <p><input type="submit" value="Result" /></p>
+
+    </form>
+
+    
+    <h2>@Model.ResultMassage</h2>
+
+</body>
+</html>

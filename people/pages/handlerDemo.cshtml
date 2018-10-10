@@ -1,0 +1,29 @@
+﻿@page
+@model people.pages.handlerDemoModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>handlerDemo</title>
+</head>
+<body>
+    <h3>@Model.Message</h3>
+
+    <form method="post">
+        <button type="submit">Click to post</button>
+    </form>
+    <br />
+    <br />
+    <section>
+        <a href="/handlerDemo">Click to get</a>
+    </section>
+
+</body>
+</html>
