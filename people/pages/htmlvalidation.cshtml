@@ -1,79 +1,64 @@
 ﻿
-
 @page
+@model people.pages.HtmlValidationModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
 @{
     Layout = null;
 
 }
 
-@{ if (IsPost)
-    {
-        string studentNumber = Request.Form["studentNumber"];
-        string number1 = Request.Form["num1"];
-        string number2 = Request.Form["num2"];
-        string number3 = Request.Form["num3"];
+<!DOCTYPE html>
 
-        <text>
-            You entered: <br />
-            Company Name: @studentNumber <br />
-            Contact Name: @number1 <br />
-            Employee Count: @number2<br />
-            Employee Count: @number3 <br />
-        </text>
-    }
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/main.css">
+    <title>htmlvalidation</title>
 
+</head>
+<body>
+    <h1>Validation</h1>
 
-    <!DOCTYPE html>
+    <form novalidate   method="post">
 
-    <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" type="text/css" href="~/StyleSheet.css">
-        <title>htmlvalidation</title>
+        <label for="">
+            Student Number :
+            <input type="text" name="studentNumber" id="studentNumber" size="20" maxlength="9" pattern = "[Ss]\d{8}" placeholder="S00000000" />
+        </label>
 
-    </head>
-    <body>
-        <h1>Validation</h1>
+        <br />
+        <fieldset>
+            <legend>Some Numbers</legend> <!-- Fieldset title -->
 
-        <form method="post" action="">
-
-            <label for="">
-                Student Number :
-                <input type="text" name="studentNumber" id="studentNumber" size="20" maxlength="9" />
+            <label for="num1">
+                Number 1
+                <input type="number" pattern="\d+" name="num1" placeholder="only whole numbers" />
             </label>
-
             <br />
-            <fieldset>
-                <legend>Some Numbers</legend> <!-- Fieldset title -->
-
-                <label for="num1">
-                    Number 1
-                    <input type="text" name="num1" id="num1" required autofocus />
-                </label>
-                <br />
-                <br />
-
-                <label for="num2">
-                    Number 2
-                    <input type="text" name="num2" id="num2" required />
-                </label>
-                <br>
-                <br />
-
-                <label for="num3">
-                    Number 3
-                    <input type="text" name="num3" id="num3" required />
-                </label>
-                <br>
-                <br />
-
-
-            </fieldset>
             <br />
-            <input type="submit" name="submit" value="Submit" />
 
-        </form>
+            <label for="num2">
+                Number 2
+                <input type="number"   name="num2" placeholder="only -10 to 10"  />
+            </label>
+            <br>
+            <br />
+
+            <label for="num3">
+                Number 3
+                <input type="number" pattern="[-9 9]" name="num3" id="num3" step="0.01" placeholder="0.00" />
+            </label>
+            <br>
+            <br />
 
 
-    </body>
+        </fieldset>
+        <br />
+        <input type="submit" name="submit" value="Submit" />
+
+    </form>
+    <h2>@Model.Massage</h2>
+
+</body>
 </html>

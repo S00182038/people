@@ -1,6 +1,5 @@
 ﻿body {
-  
-   
+    width:50%;
 }
 
 h1{
@@ -9,6 +8,9 @@ h1{
     text-align:center;
     margin:20px;
 
+}
+h2{
+    background-color:yellow;
 }
 input:invalid {
     border: 2px dashed red;
@@ -27,4 +29,5 @@ form{
     margin:20px;
     padding:20px;
 }
+
 
