@@ -1,0 +1,29 @@
+﻿@page
+@model people.pages.taghelpplayModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>taghelpplay</title>
+</head>
+<body>
+   
+        <label asp-for="Number1"></label>
+        <input asp-for="Number1" />
+        <label asp-for="Number2"></label>
+        <input asp-for="Number2" />
+        <button asp-action="post">Submit</button>
+   
+
+    <h2>@Model.Message</h2>
+
+    @*<h3>@Model.Number1 plus @Model.Number2 equals @(Model.Number1+Model.Number2)</h3>*@
+</body>
+</html>
