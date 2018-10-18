@@ -6,6 +6,7 @@
     Layout = null;
 }
 
+
 <!DOCTYPE html>
 
 <html>
@@ -14,15 +15,22 @@
     <title>taghelpplay</title>
 </head>
 <body>
-   
-        <label asp-for="Number1"></label>
-        <input asp-for="Number1" />
-        <label asp-for="Number2"></label>
-        <input asp-for="Number2" />
-        <button asp-action="post">Submit</button>
-   
+    <form method="post">
+        <label asp-for=Number1></label>
+        <input asp-for=Number1 />
 
+        <label asp-for=Number2></label>
+        <input asp-for=Number2 />
+        <button type="button">Submit</button>
+
+        <label for="Winter" id="Winter" type="radio" asp-for="Season">Winter</label>
+        <label for="Summer" id="Summer" type="radio" asp-for="Season">Summer</label>
+        <label for="autumn" id="autumn" type="radio" asp-for="Season">Autumn</label>
+        <label for="spring" id="spring" type="radio" asp-for="Season">Spring</label>
+    </form>
     <h2>@Model.Message</h2>
+
+
 
     @*<h3>@Model.Number1 plus @Model.Number2 equals @(Model.Number1+Model.Number2)</h3>*@
 </body>

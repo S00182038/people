@@ -11,8 +11,16 @@ namespace people.pages
     {
         [BindProperty]
         public string Message { get; set; }
-        public int Number1 { get; set;}
+        [BindProperty]
+        public int Number1 { get; set; }
+        [BindProperty]
         public int Number2 { get; set; }
+        //[BindProperty]
+        //public decimal Number2 { get; set; }
+        [BindProperty]
+        public string[] Season { get; set; } = new string[4];
+
+
         public void OnGet()
         {
 
